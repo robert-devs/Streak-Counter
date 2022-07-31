@@ -41,6 +41,19 @@ ion-icon {
     align-items: center;
     height: 50vh;
     background-color: #fa6f4c;
+    flex: 1;
+    padding: 20px 10px;
+}
+.task-container{
+    flex: 1;
+}
+.task-item{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    border: 1px solid #eee;
+    padding: 10px 10px;
+    gap: 12px;
 }
 
 .center i{
@@ -65,7 +78,7 @@ ion-icon {
 .card h2{
     background-color: #fa6f4c;
     padding: 5px 10px;
-    color: white;
+    color: white;border-radius: 2px;
 }
 .form {
     justify-content: center;
