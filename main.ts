@@ -1,18 +1,27 @@
+import {Task} from "./interfaces/task.interface.js";
+
 const streakContainer = document.getElementById("mytask")
 const taskName = document.getElementById("task-input") as HTMLElement
 const dateInput = document.getElementById("date-input") as HTMLElement
 const imageInput = document.getElementById("image-input") as HTMLElement
 const addTask = document.getElementById("add-task") as HTMLElement
+const addBtnIcon = document.querySelector(".icon-inner svg") as HTMLElement;
 
-interface Task {
-    date: string
-    taskName: string
-    imageInput: any
-    id: number
+console.log(addBtnIcon);
 
+
+const showAddForm = ()=>{
+    (document.querySelector(".main") as HTMLElement).style.display = "none";
+    (document.querySelector(".body") as HTMLElement).style.display = "block"
 }
+const hideAddForm = ()=>{
+    (document.querySelector(".main") as HTMLElement).style.display = "flex";
+    (document.querySelector(".body") as HTMLElement).style.display = "none"
+}
+
+
 class tasks {
-    taskArray: Task[] = []
+    private taskArray: Task[] = []
     constructor() {
         this.loadTasks()
     }
@@ -29,7 +38,7 @@ class tasks {
             const todosHtml = this.taskArray.map(({ id, date, taskName, imageInput }) => {
                 const difference: any = ((new Date() as any) - (new Date(date) as any)) / 1000 / 60 / 60 / 24
 
-                // let show = difference < 0 ? " Done In Time" : `Late by ${Math.floor(difference)} Days`
+                let show = difference < 0 ? " Done In Time" : `Late by ${Math.floor(difference)} Days`
 
 
 
@@ -56,4 +65,5 @@ class tasks {
 
 
 }
-// const todos = 
+
+
