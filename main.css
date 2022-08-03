@@ -47,6 +47,11 @@ ion-icon {
 .task-container{
     flex: 1;
 }
+.task-body{
+    width: 70px;
+    height: 80px;
+    
+}
 .task-item{
     display: flex;
     align-items: center;
@@ -66,7 +71,7 @@ ion-icon {
     color: #fff;
 }
 .card {
-  width: 100%;
+  /* width: 100%; */
   min-height: 200px;
   background-color: aliceblue;
   margin-top: 20px;
@@ -96,6 +101,7 @@ ion-icon {
     align-items: flex-start;
     margin: 20px 0px;
     gap: 10px;
+    
 }
 
 .input-container .input{
