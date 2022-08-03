@@ -25,16 +25,19 @@ class tasks {
                         60 /
                         24;
                     let show = difference < `${Math.floor(difference)} Days`;
-                    const element = `<li class="task-item   id="${id}" >
+                    const element = `<li class="task-item   id="${id}" style = list-style:none>
               
                     <div class="task-body" >
-                         <img src="${imageInput} "style= width:250px ,height:300px;alt="">
-                           <h3>${taskName}</>
-                            <h6>${date} </h6>
-                            
+                            <div id="buttons" style="display:none;>
+                                <btn class="btn1"> close</btn>
+                                 <btn class ="btn2">delete</btn>
+                            </div>
+                        <img src="${imageInput} "style= width:250px ,height:300px;alt="">
+                        <h3>${taskName}</>
+                        <h6>${date} </h6>
+                           
                     </div>
-                   
-                    
+                 
                 </li>`;
                     return element;
                 });

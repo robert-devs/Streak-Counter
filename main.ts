@@ -45,16 +45,19 @@ class tasks {
 
           let show = difference < `${Math.floor(difference)} Days`;
 
-          const element: string = `<li class="task-item   id="${id}" >
+          const element: string = `<li class="task-item   id="${id}" style = list-style:none>
               
                     <div class="task-body" >
-                         <img src="${imageInput} "style= width:250px ,height:300px;alt="">
-                           <h3>${taskName}</>
-                            <h6>${date} </h6>
-                            
+                            <div id="buttons" style="display:none;>
+                                <btn class="btn1"> close</btn>
+                                 <btn class ="btn2">delete</btn>
+                            </div>
+                        <img src="${imageInput} "style= width:250px ,height:300px;alt="">
+                        <h3>${taskName}</>
+                        <h6>${date} </h6>
+                           
                     </div>
-                   
-                    
+                 
                 </li>`;
           return element;
         }
@@ -64,6 +67,7 @@ class tasks {
       // this.addEventListeners()
     } else {
       streakContainer!.innerHTML =
+      
         "<h2 style='text-align: center;'>No Streak added Yet</h2>";
     }
   };
@@ -71,7 +75,8 @@ class tasks {
     const addTaskBtn = document.getElementById("add-task") as HTMLButtonElement;
 
     // console.log("fgfgfgfg",addTaskBtn);
-  };
+};
+
 }
 
 const todos = new tasks();
@@ -102,4 +107,8 @@ const newTodosubmits = (e: any) => {
   taskName.value = "";
   dateInput.value = "";
   imageInput.value = "";
+
+
+
 };
+

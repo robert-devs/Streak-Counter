@@ -1,7 +1,7 @@
 export interface Task {
     date: string
     taskName: string
-    imageInput: any
+    imageInput: string
     id: number
 
 }
